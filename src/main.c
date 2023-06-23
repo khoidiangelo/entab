@@ -2,7 +2,6 @@
 #include "readline.c"
 #include "entab.c"
 #define MAXLINE 1000
-
 int main() {
     printf("Hello, World!\n");
     char line[MAXLINE];
