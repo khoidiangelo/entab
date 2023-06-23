@@ -3,4 +3,4 @@ project(entab C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(entab main.c)
+add_executable(entab src/main.c)
