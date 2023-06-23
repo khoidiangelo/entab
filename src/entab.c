@@ -5,21 +5,18 @@ int entab(char s[], int limit) {
         if (s[i] == ' ') {
             ++c;
             if (c == TABSTOP) {
-                for (int j = i; j < limit+1; ++j) {
+                for (int j = i; j <= limit; ++j) {
                     s[j-TABSTOP+1] = s[j];
                 }
                 s[i-TABSTOP+1] = '\t';
-                i -= TABSTOP;
-                c = 0;
+                i -= TABSTOP+1;
                 r -= TABSTOP;
+                c = 0;
             }
         } else {
             c = 0;
             ++r;
         }
     }
-    s[r] = '\n';
-    ++r;
-    s[r] = '\0';
     return r;
 }
