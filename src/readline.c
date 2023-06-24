@@ -1,14 +1,13 @@
 #include <stdio.h>
 int readline(char s[], int limit) {
-    int c, len = 0;
-    for (int i = 0; i < limit-1 && (c = getchar()) != '\n' && c != EOF; ++i) {
+    int c, i;
+    for (i = 0; i < limit-1 && (c = getchar()) != '\n' && c != EOF; ++i) {
         s[i] = c;
-        ++len;
     }
     if (c == '\n') {
-        s[len] = c;
-        ++len;
+        s[i] = c;
+        ++i;
     }
-    s[len] = '\0';
-    return len;
+    s[i] = '\0';
+    return i;
 }
